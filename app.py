@@ -18,8 +18,9 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Bloemfontein', 'Ahmedabad', 'Cuttack', 'Nagpur', 'Dharamsala',
        'Visakhapatnam', 'Pune', 'Raipur', 'Ranchi', 'Abu Dhabi',
        'Sharjah', 'Mohali', 'Bengaluru']
+with open('pipe.pkl', 'rb') as f:
+    pipe = pickle.load(f)
 
-pipe =  pickle.load(open('pipe.pkl' , 'rb'))
 
 col1, col2 = st.columns(2)
 
