@@ -18,9 +18,11 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Bloemfontein', 'Ahmedabad', 'Cuttack', 'Nagpur', 'Dharamsala',
        'Visakhapatnam', 'Pune', 'Raipur', 'Ranchi', 'Abu Dhabi',
        'Sharjah', 'Mohali', 'Bengaluru']
-with open('pipe.pkl', 'rb') as f:
-    pipe = pickle.load(f)
-
+try:
+    with open('pipe.pkl', 'rb') as f:
+        pipe = pickle.load(f)
+except FileNotFoundError:
+    st.error("Model file 'pipe.pkl' not found. Please check the file path and ensure it's available.")
 
 col1, col2 = st.columns(2)
 
